@@ -116,7 +116,7 @@ def AlignPrimers(input_file):
 def run_mothur():
     path = os.getcwd()
     src=open("stability.batch","r")
-    fline="set.dir = (input ="+path+")\n" #Prepending input directory for mother for batch file
+    fline="set.dir(input ="+path+")\n" #Prepending input directory for mother for batch file
     oline=src.readlines()
     #Here, we prepend the string we want to on first line
     oline.insert(0,fline)
