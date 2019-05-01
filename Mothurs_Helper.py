@@ -13,7 +13,7 @@ def download_references():
     os.system("wget https://github.com/pr2database/pr2database/releases/download/4.11.1/pr2_version_4.11.1_mothur.tax.gz")
     os.system("gunzip pr2_version_4.11.1_mothur.tax.gz")
     os.system("wget https://mothur.org/w/images/7/71/Silva.seed_v132.tgz")
-    os.system("unzip Silva.bacteria.zip")
+    os.system("gunzip Silva.seed_v132.tgz")
 
 def Preprocess(input_SRA):
     path = input("Please input the path to your local installation of SRA Toolkit")
