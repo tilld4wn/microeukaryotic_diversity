@@ -19,13 +19,13 @@ summary.seqs(count=stability.trim.contigs.good.count_table)
 #Customize the alignment of the primer region of saccharomyces cerevisiae to #the reference silva database 
 align.seqs(fasta=Scerevisiae.fasta, reference=silva.seed_v132.align)
 #Outputs a summary table of the alignment
-summary.seqs(fasta=scerevisiae_v7_v8.align)
+summary.seqs(fasta=Scerevisiae.align)
 #Customizes the reference database to the region of interest. Start and end #positions can be found from the previous summary table generated
-pcr.seqs(fasta=silva.nr_v132.align, start=29689, end=42545, keepdots=FALSE)
+pcr.seqs(fasta=silva.seed_v132.align, start=29689, end=42545, keepdots=FALSE)
 #Outputs a summary table of the region of interest
-summary.seqs(fasta=silva.nr_v132.pcr.align)
+summary.seqs(fasta=silva.seed_v132.pcr.align)
 #Aligns the sequences to the customized reference silva database
-align.seqs(fasta=stability.trim.contigs.good.unique.fasta, reference=silva.nr_v132.pcr.align)
+align.seqs(fasta=stability.trim.contigs.good.unique.fasta, reference=silva.seed_v132.pcr.align)
 #Outputs a summary table of the alignment 
 summary.seqs(fasta=stability.trim.contigs.good.unique.align, count=stability.trim.contigs.good.count_table)
 #Filters out the sequences to make sure they all start at or before position 2 #and end at or before position 12856. The start and stop position can be found #from the summary table generated from the previous command
