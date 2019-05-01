@@ -129,7 +129,7 @@ def run_mothur():
     
 def run_R_scripts():
     os.system("Rscript Dendro.R")
-def setup();
+def setup():
     path = os.getcwd()
     os.mkdir(path+'/Mothurs_Helper')
     os.chdir(path+'/Mothurs_Helper')
