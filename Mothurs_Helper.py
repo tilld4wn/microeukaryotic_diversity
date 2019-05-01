@@ -142,7 +142,7 @@ print("Do you want to run the Mothurs_Helper with Test data? \n")
 test = input("y/n?\n")
 if test == "y":
     input_file = "primer_test.txt"
-    download_reference()
+    download_references()
     AlignPrimers(input_file)
     run_mothur()
     print("Please change the working directory of your installation of R to the ~/Mothurs_Helper \n")
