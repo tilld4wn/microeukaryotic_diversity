@@ -17,7 +17,7 @@ count.seqs(name=stability.trim.contigs.good.names, group=stability.contigs.good.
 #Generates a summary table based on the output file provided from the previous #command
 summary.seqs(count=stability.trim.contigs.good.count_table)
 #Customize the alignment of the primer region of saccharomyces cerevisiae to #the reference silva database 
-align.seqs(fasta=scerevisiae_v7_v8.fasta, reference=silva.nr_v132.align)
+align.seqs(fasta=Scerevisiae.fasta, reference=silva.seed_v132.align)
 #Outputs a summary table of the alignment
 summary.seqs(fasta=scerevisiae_v7_v8.align)
 #Customizes the reference database to the region of interest. Start and end #positions can be found from the previous summary table generated
