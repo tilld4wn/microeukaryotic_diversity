@@ -142,6 +142,7 @@ print("Do you want to run the Mothurs_Helper with Test data? \n")
 test = input("y/n?\n")
 if test == "y":
     input_file = "primer_test.txt"
+    download_reference()
     AlignPrimers(input_file)
     run_mothur()
     print("Please change the working directory of your installation of R to the ~/Mothurs_Helper \n")
@@ -157,13 +158,13 @@ else:
     input_SRA = input("Please enter the name of the text file containing your desired SRR files \n")
     input_file = input("Please enter the name of the text file containing your sequencing primers \n")
 
-download_references()
-Preprocess(input_SRA)
-AlignPrimers(input_file)
-run_mothur()
-print("Please change the working directory of your installation of R to the ~/Mothurs_Helper \n")
-rscript = input("Have you done this? y/n? \n")
-if rscript == "y":
-    run_R_scripts()
-else:
+    download_references()
+    Preprocess(input_SRA)
+    AlignPrimers(input_file)
+    run_mothur()
     print("Please change the working directory of your installation of R to the ~/Mothurs_Helper \n")
+    rscript = input("Have you done this? y/n? \n")
+    if rscript == "y":
+        run_R_scripts()
+    else:
+        print("Please change the working directory of your installation of R to the ~/Mothurs_Helper \n")
