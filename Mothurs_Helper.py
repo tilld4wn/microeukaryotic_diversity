@@ -141,8 +141,15 @@ path = os.getcwd()
 print("Do you want to run the Mothurs_Helper with Test data? \n")
 test = input("y/n?\n")
 if test == "y":
-    input_SRA = "sra_test.txt"
     input_file = "primer_test.txt"
+    AlignPrimers(input_file)
+    run_mothur()
+    print("Please change the working directory of your installation of R to the ~/Mothurs_Helper \n")
+    rscript = input("Have you done this? y/n? \n")
+    if rscript == "y":
+        run_R_scripts()
+    else:
+        print("Please change the working directory of your installation of R to the ~/Mothurs_Helper \n")
 
 else:
     print("For the following input files, make sure you have one element per line. Include the file ending '.txt'")
