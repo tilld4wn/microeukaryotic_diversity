@@ -10,9 +10,11 @@ The ecological impacts of microeukaryotes in marine systems is well documented a
 ## Dependencies
 * **Python 3**
 * **Linux**
-* **R 3.5.2 **
+* **R 3.5.2**
 * **Mothur v1.41.3**
 * **sratoolkit 2.9.0**
+* **uchime**
+* **vsearch**
 
 
 
