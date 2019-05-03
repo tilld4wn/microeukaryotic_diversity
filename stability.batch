@@ -62,11 +62,11 @@ cluster.split(fasta=stability.trim.contigs.good.unique.good.filter.unique.preclu
 #Determines the number of sequences in each OTU using 0.03 as the cutoff #level
 make.shared(list=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.list, count=stability.trim.contigs.good.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.count_table, label=0.03)
 #Determines the taxonomy for each OTU
-classify.otu(list=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.list, count=stability.trim.contigs.good.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.pick.count_table, taxonomy=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.1_mothur.wang.pick.taxonomy, label=0.03)
+classify.otu(list=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.list, count=stability.trim.contigs.good.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.count_table, taxonomy=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.1_mothur.wang.pick.taxonomy, label=0.03)
 #Counts the number of sequences in each sample
-count.groups(shared=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.shared, size=30795)
+count.groups(shared=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.shared)
 #Normalizes the data 
-sub.sample(shared=stability.opti_mcc.shared, size=30795)
+sub.sample(shared=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.shared, size=30795)
 #Calculates the alpha diversity of the sequences
 rarefaction.single(shared=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.shared, calc=sobs, freq=100)
 #Summary table of analyses including number of sequences, sample coverage, #number of observed OTUs, and Inverse Simpson
