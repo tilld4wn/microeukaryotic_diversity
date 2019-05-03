@@ -30,12 +30,30 @@ https://github.com/tilld4wn/microeukaryotic_diversity.git
 ## Proper Input
 * The input for this wrapper include two text files. One text file contains desired SRA accessions. The second contains sequencing primers used. These should be formatted with one entry per line. 
 * You may also choose to use included test data.  
-**EXAMPLE INPUT FROM TEST DATA FILE**
+
+## Recommended Test Data
+* Github's file size restrictions prevent us from including any test data in the repository. However, we recommend you use the following files from the original sequencing experiment:
+
+*7_S8_L001_R1_001.fastq 
+*7_S8_L001_R2_001.fastq 
+
+*60_S44_L001_R1_001.fastq 
+*60_S44_L001_R2_001.fastq 
+
+*61_S45_L001_R1_001.fastq
+*61_S45_L001_R2_001.fastq
+
+*100_S76_L001_R1_001.fastq
+*100_S76_L001_R2_001.fastq
+
+
+**EXAMPLE INPUT **
+Below is the proper formatting for input file of SRA accesions as well as Sequencing Primers
 ```
 SRR2381067
 SRR1342593
-
-
+```
+```
 TTAATTTGACTCAACRCGGG
 CGGGCGGTGTGTACAAAGG
 ```
